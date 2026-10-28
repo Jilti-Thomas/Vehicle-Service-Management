@@ -1,16 +1,19 @@
 {
-  "name": "vehicle-service-server",
+  "name": "vehicle-service-client",
+  "private": true,
   "version": "1.0.0",
-  "description": "REST API for the Vehicle Service and Management System",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "node index.js",
-    "dev": "node --watch index.js",
-    "reset-db": "node db.js --reset"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "better-sqlite3": "^11.3.0",
-    "cors": "^2.8.5",
-    "express": "^4.19.2"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.2"
   }
 }
