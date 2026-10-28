@@ -1,16 +1,16 @@
 {
-  "name": "vehicle-service-management-system",
+  "name": "vehicle-service-server",
   "version": "1.0.0",
-  "private": true,
-  "description": "Micro project: Vehicle Service and Management System (React + Express + SQLite)",
+  "description": "REST API for the Vehicle Service and Management System",
+  "main": "index.js",
   "scripts": {
-    "install-all": "npm install --prefix server && npm install --prefix client",
-    "server": "npm start --prefix server",
-    "client": "npm run dev --prefix client",
-    "dev": "concurrently -n api,web -c yellow,cyan \"npm run server\" \"npm run client\"",
-    "reset-db": "npm run reset-db --prefix server"
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "reset-db": "node db.js --reset"
   },
-  "devDependencies": {
-    "concurrently": "^8.2.2"
+  "dependencies": {
+    "better-sqlite3": "^11.3.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
   }
 }
